@@ -7,8 +7,8 @@ Summary:	Generate SVG railroad syntax diagrams, like on JSON.org
 Summary(pl.UTF-8):	Generowanie diagramów składniowych SVG, jak na JSON.org
 Name:		python-railroad-diagrams
 Version:	1.1.1
-Release:	1
-License:	- (enter GPL/GPL v2/GPL v3/LGPL/BSD/BSD-like/other license name here)
+Release:	2
+License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/railroad-diagrams/
 Source0:	https://files.pythonhosted.org/packages/source/r/railroad-diagrams/railroad-diagrams-%{version}.tar.gz
@@ -25,6 +25,8 @@ BuildRequires:	python3-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 Requires:	python-modules >= 1:2.7
+# "railroad" dir shadows railroad.py
+Conflicts:	python-railroad
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,6 +44,8 @@ Summary:	Generate SVG railroad syntax diagrams, like on JSON.org
 Summary(pl.UTF-8):	Generowanie diagramów składniowych SVG, jak na JSON.org
 Group:		Libraries/Python
 Requires:	python3-modules >= 1:3.4
+# "railroad" dir shadows railroad.py
+Conflicts:	python3-railroad
 
 %description -n python3-railroad-diagrams
 This is a small library for generating railroad diagrams (like what
