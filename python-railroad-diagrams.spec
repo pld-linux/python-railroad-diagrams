@@ -6,6 +6,7 @@
 Summary:	Generate SVG railroad syntax diagrams, like on JSON.org
 Summary(pl.UTF-8):	Generowanie diagramów składniowych SVG, jak na JSON.org
 Name:		python-railroad-diagrams
+# keep 1.x here for python2 support
 Version:	1.1.1
 Release:	8
 License:	MIT
